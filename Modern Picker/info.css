@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .info-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .info-header {
+    text-align: center;
+    position: relative;
+  }
+  
+  .info-header h1 {
+    margin: 0;
+  }
+  
+  .info-header p {
+    color: #666;
+  }
+  
+  .mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .mode-toggle .icon {
+    font-size: 24px;
+    color: #007bff;
+  }
+  
+  .info-section h2 {
+    color: #007bff;
+  }
+  
+  .info-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .info-section ul li {
+    margin: 10px 0;
+  }
+  
+  .info-section ul li i {
+    margin-right: 8px;
+  }
+  
+  .info-section ol {
+    padding-left: 20px;
+  }
+  
+  .info-section a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .info-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .info-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  body.dark-mode .info-container {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode .info-header p,
+  body.dark-mode .info-section h2,
+  body.dark-mode .info-section a {
+    color: #f4f4f4;
+  }
+  
+  body.dark-mode .mode-toggle .icon {
+    color: #f4f4f4;
+  }
+  

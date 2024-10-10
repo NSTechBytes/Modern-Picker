@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  width: 320px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.color-picker-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-picker {
+  width: 80px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.format-select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.ok-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ok-button:hover {
+  background-color: #45a049;
+}
+
+.delete-all-section {
+  text-align: center;
+}
+
+.delete-all-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-all-button:hover {
+  background-color: #d32f2f;
+}
+
+.selected-color-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-color-block {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.selected-color-code {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.copy-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.copy-button:hover {
+  background-color: #1976D2;
+}
+
+.history-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  position: relative;
+  width: 100%;
+}
+
+.color-block {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.color-code {
+  margin-left: 10px;
+  font-size: 12px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px;
+  color: #555;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .color-history-item {
+  background-color: #444;
+}
+
+body.dark-mode .icon {
+  color: #ddd;
+}
+
+body.dark-mode .icon:hover {
+  color: #fff;
+}
+
+body.dark-mode .format-select,
+body.dark-mode .ok-button,
+body.dark-mode .delete-all-button,
+body.dark-mode .copy-button {
+  background-color: #555;
+  color: white;
+}
+
+body.dark-mode .ok-button:hover,
+body.dark-mode .delete-all-button:hover,
+body.dark-mode .copy-button:hover {
+  background-color: #666;
+}
+
+body.dark-mode .fa-sun {
+  display: none;
+}
+
+body:not(.dark-mode) .fa-moon {
+  display: none;
+}
+
+body.dark-mode .fa-moon {
+  display: block;
+}
+
+body:not(.dark-mode) .fa-sun {
+  display: block;
+}
+
+/* Notification Popup */
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  z-index: 1000;
+}
+
+body.dark-mode .copy-notification {
+  background-color: #555;
+}

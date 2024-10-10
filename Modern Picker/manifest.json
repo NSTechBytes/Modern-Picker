@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "ModernPicker",
+  "version": "583.2",
+  "description": "A powerful color picker extension.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["info.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

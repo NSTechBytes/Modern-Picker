@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Picker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Updated Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Dark Mode Toggle -->
+    <div class="mode-toggle">
+      <i id="themeToggle" class="fas fa-sun icon" title="Toggle Dark/Light Mode"></i>
+    </div>
+
+    <!-- Color Picker and Format Selection -->
+    <div class="color-picker-section">
+      <input type="color" id="colorPicker" class="color-picker">
+      <select id="formatSelect" class="format-select">
+        <option value="hex">HEX</option>
+        <option value="rgb">RGB</option>
+        <option value="hsl">HSL</option>
+        <option value="hsv">HSV</option>
+        <option value="hsb">HSB</option>
+        <option value="hwb">HWB</option>
+        <option value="cmyk">CMYK</option>
+        <option value="ncol">ncol</option>
+        <option value="cielab">CIELAB</option>
+        <option value="ciexyz">CIEXYZ</option>
+        <option value="veca">VECA</option>
+        <option value="decimal">Decimal</option>
+        <option value="hexint">Hex Int</option>
+      </select>
+      <button id="okButton" class="ok-button">OK</button>
+    </div>
+
+    <!-- Display Selected Color -->
+    <div class="selected-color-section">
+      <div id="selectedColorBlock" class="color-block"></div>
+      <div id="selectedColorCode" class="color-code"></div>
+      <button id="copyColorButton" class="copy-button">Copy</button>
+    </div>
+
+    <!-- Delete All History Button -->
+    <div class="delete-all-section">
+      <button id="deleteAllButton" class="delete-all-button">
+        <i class="fas fa-trash-alt"></i> Delete All History
+      </button>
+    </div>
+
+    <!-- Color History Section -->
+    <div class="history-section">
+      <div id="colorHistory" class="color-history"></div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="copyNotification" class="copy-notification"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
